@@ -8,6 +8,8 @@ env:
 
 jobs:
   test-and-publish:
+    # Fork releases distribute GitHub assets, not the upstream NuGet package.
+    if: github.repository == 'Adonuu/TwinCAT-MCP'
     runs-on: windows-latest
     permissions:
       id-token: write
